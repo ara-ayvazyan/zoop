@@ -1,5 +1,6 @@
 #pragma once
 
+#include <zoop/handle.h>
 #include <memory>
 #include <cassert>
 
@@ -18,7 +19,7 @@ namespace zoop
             using value_type = typename Queue::value_type;
 
             template <typename U>
-            using handle_for = std::unique_ptr<U, deleter>;
+            using handle_for = handle<U, deleter>;
 
             object_pool_impl(Reset reset, Queue queue)
                 : m_queue{ std::move(queue) },

@@ -87,6 +87,9 @@
     <ClInclude Include="..\inc\zoop\detail\rebind_queue.h">
       <Filter>inc/zoop\detail</Filter>
     </ClInclude>
+    <ClInclude Include="..\inc\zoop\handle.h">
+      <Filter>inc/zoop\detail</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -104,7 +104,9 @@ int main()
         a.allocate(1);
     }*/
 
-    pool.take();
+    auto hh = pool.take();
+    hh->allocate(1);
+    hh == hh;
 
     //auto h = pool.take(1024);
 

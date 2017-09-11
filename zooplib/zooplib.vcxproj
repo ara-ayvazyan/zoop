@@ -124,6 +124,7 @@
     <ClInclude Include="..\inc\zoop\detail\rebind_queue.h" />
     <ClInclude Include="..\inc\zoop\detail\object_pool_impl.h" />
     <ClInclude Include="..\inc\zoop\detail\overflow_counter.h" />
+    <ClInclude Include="..\inc\zoop\handle.h" />
     <ClInclude Include="..\inc\zoop\null_reset.h" />
     <ClInclude Include="..\inc\zoop\objects\composite_object.h" />
     <ClInclude Include="..\inc\zoop\objects\embedded_allocator.h" />

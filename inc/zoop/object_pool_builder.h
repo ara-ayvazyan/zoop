@@ -20,7 +20,8 @@ namespace zoop
         template <typename OtherQueue, typename... QueueArgs>
         auto wrap_queue(QueueArgs&&... args)
         {
-            return object_pool_builder<OtherQueue, Reset>{ OtherQueue{ std::move(m_queue), std::forward<QueueArgs>(args)... }, std::move(m_reset) };
+            return object_pool_builder<OtherQueue, Reset>{
+                OtherQueue{ std::move(m_queue), std::forward<QueueArgs>(args)... }, std::move(m_reset) };
         }
 
         template <template <typename, typename...> typename OtherQueue, typename... T, typename... QueueArgs>

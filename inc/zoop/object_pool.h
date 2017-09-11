@@ -42,9 +42,9 @@ namespace zoop
 
 
     template <typename T, typename Deleter>
-    inline std::shared_ptr<T> share(std::unique_ptr<T, Deleter> h)
+    inline std::shared_ptr<T> share(handle<T, Deleter> h)
     {
-        if (auto ptr = &*h)
+        if (auto ptr = h.get())
         {
             return { std::make_shared<decltype(h)>(std::move(h)), ptr };
         }
@@ -53,9 +53,9 @@ namespace zoop
     }
 
     template <typename T, typename Deleter, typename Alloc>
-    inline std::shared_ptr<T> share(std::unique_ptr<T, Deleter> h, const Alloc& alloc)
+    inline std::shared_ptr<T> share(handle<T, Deleter> h, const Alloc& alloc)
     {
-        if (auto ptr = &*h)
+        if (auto ptr = h.get())
         {
             return { std::allocate_shared<decltype(h)>(alloc, std::move(h)), ptr };
         }

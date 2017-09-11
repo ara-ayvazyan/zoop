@@ -20,13 +20,33 @@ namespace zoop
                 std::forward_as_tuple(Size::value) }
         {}
 
-        template <typename Deleter>
-        friend std::shared_ptr<T> share(std::unique_ptr<local_shared_ptr, Deleter> h)
+        auto operator->() const noexcept
         {
-            if (h)
+            return &operator*();
+        }
+
+        auto operator->() noexcept
+        {
+            return &operator*();
+        }
+
+        auto& operator*() const noexcept
+        {
+            return std::get<0>(*this);
+        }
+
+        auto& operator*() noexcept
+        {
+            return std::get<0>(*this);
+        }
+
+        template <typename Deleter>
+        friend std::shared_ptr<T> share(handle<local_shared_ptr, Deleter> h)
+        {
+            if (auto p = h.get())
             {
-                auto ptr = &std::get<0>(*h);
-                return { share(std::move(h), stl_allocator<T, Alloc>{ std::get<1>(*h) }), ptr };
+                auto ptr = &std::get<0>(*p);
+                return { share(std::move(h), stl_allocator<T, Alloc>{ std::get<1>(*p) }), ptr };
             }
 
             return {};

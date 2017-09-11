@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="inc/zoop">
+      <UniqueIdentifier>{eb7838d3-7ec7-4bf5-b2e9-04c698d7be97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc/zoop\detail">
+      <UniqueIdentifier>{7a587a63-fac8-4b5c-b559-70a888a7f096}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc/zoop\allocators">
+      <UniqueIdentifier>{de5c1076-ee95-4f6e-a469-c5b97940b9d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc/zoop\queues">
+      <UniqueIdentifier>{9b7320de-842d-4df2-9edf-d3054211ce03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc/zoop\objects">
+      <UniqueIdentifier>{7bcbef0f-3bec-4894-8ed7-8a0aabb382e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{31eb3132-35cd-4725-8aac-9f67dfa17b42}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\inc\zoop\object_pool.h">
+      <Filter>inc/zoop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\zoop\object_pool_builder.h">
+      <Filter>inc/zoop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\zoop\detail\object_pool_impl.h">
+      <Filter>inc/zoop\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\zoop\detail\overflow_counter.h">
+      <Filter>inc/zoop\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\zoop\null_reset.h">
+      <Filter>inc/zoop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\zoop\allocators\lockfree_allocator.h">
+      <Filter>inc/zoop\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\zoop\allocators\lockfree_fixed_allocator.h">
+      <Filter>inc/zoop\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\zoop\allocators\single_thread_allocator.h">
+      <Filter>inc/zoop\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\zoop\allocators\single_thread_fixed_allocator.h">
+      <Filter>inc/zoop\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\zoop\allocators\stl_allocator.h">
+      <Filter>inc/zoop\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\zoop\queues\wait_queue.h">
+      <Filter>inc/zoop\queues</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\zoop\queues\growable_queue.h">
+      <Filter>inc/zoop\queues</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\zoop\queues\limited_queue.h">
+      <Filter>inc/zoop\queues</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\zoop\queues\limited_throw_queue.h">
+      <Filter>inc/zoop\queues</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\zoop\queues\lockfree_stack.h">
+      <Filter>inc/zoop\queues</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\zoop\queues\lockfree_win32_list.h">
+      <Filter>inc/zoop\queues</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\zoop\objects\composite_object.h">
+      <Filter>inc/zoop\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\zoop\objects\embedded_allocator.h">
+      <Filter>inc/zoop\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\zoop\objects\local_shared_ptr.h">
+      <Filter>inc/zoop\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\zoop\objects\local_intrusive_ptr.h">
+      <Filter>inc/zoop\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\zoop\allocators\fixed_allocator.h">
+      <Filter>inc/zoop\allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\zoop\detail\rebind_queue.h">
+      <Filter>inc/zoop\detail</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\lockfree_allocator.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lockfree_fixed_allocator.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\single_thread_allocator.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\single_thread_fixed_allocator.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

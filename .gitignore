@@ -30,3 +30,18 @@
 *.exe
 *.out
 *.app
+
+# Visual Studio
+/.vs
+/Debug
+/Release
+/x64
+/zooplib/Debug
+/zooplib/Release
+/zooplib/x64
+/unit_tests/Debug
+/unit_tests/Release
+/unit_tests/x64
+
+# NuGet
+/packages
